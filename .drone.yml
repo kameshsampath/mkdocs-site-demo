@@ -4,12 +4,12 @@ name: default
 
 steps:
 
-- name: build site
-  image: docker.io/kameshsampath/drone-mkdocs-site
-  pull: never
-  settings:
-    gh_pages_deploy: true
-    github_repository: 
-      from_secret: github_repo
-    github_token:
-       from_secret: github_token
+  - name: build site
+    image: docker.io/kameshsampath/drone-mkdocs-site
+    pull: never
+    settings:
+      gh_pages_deploy: true
+      github_repository:
+        from_secret: github_repo
+      github_token:
+        from_secret: github_token
